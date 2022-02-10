@@ -1,0 +1,133 @@
+---
+title: "Resumen lectura 1"
+author: "Itzia Livera"
+date: "10/2/2022"
+output: html_document
+---
+<div style="text-align: justify">
+<span style="color: darkblue">
+**POBLACIÓN Y DEMOGRAFÍA**  
+</span>
+
+<span style="color: green">
+***1. Algunas definiciones*** 
+</span>
+
+El objeto de estudio de la demografía es la población. 
+
+Población: conjunto de individuos, constituido de forma estable, ligado por vínculos de reproducción e identificado por características territoriales, políticas, jurídicas, étnicas o religiosas. 
+
+NOTA: una colectividad que no se reproduce no es, en general, objeto de atención del demógrafo.
+
+Una población, pues, se definirá como tal si tiene continuidad en el tiempo y si esta continuidad está asegurada por vínculos de reproducción que ligan padres e hijos y garantizan la sucesión de las generaciones, también se define por las características que trazan su perfil y sus límites.
+Estas características pueden ser de distinta naturaleza, el ejemplo más común a citar es la geográfica, es decir, la pertenencia a un determinado territorio, otro ejemplo es la pertenencia a un grupo étnico o religioso.
+En muchos casos, barreras políticas y jurídicas o de casta contribuyen a delimitar nitídamente las fronteras y separaciones entre grupos, son tales que los agregados así definidos asumen su propia autonomía y estabilidad, reproduciéndose y conservándose en el tiempo. 
+Las poblaciones se forman y se extinguen; se forman esencialmente por migraciones asociadas con adecuadas capacidades reproductivas pero tampoco faltan ejemplos de poblaciones creadas artificialmente por imposición, desmembrando etnias, grupos o naciones anteriormente unidos.
+Por lo tanto, la demografía estudiará aquellos procesos que determinan la formación, la conservación y la desaparición de las poblaciones: fecundidad, mortalidad y movilidad
+
+<span style="color: green">
+***2. Componentes básicos de una población y de su estructura***
+</span>
+
+Las poblaciones no se diferencian solamente por su ritmo de crecimiento, sino también por su estructura, es decir, por su composición por edad, sexo, estado civil, etc.
+
+La estructura por edad es de interés primordial, dado que los fenómenos de fecundidad y mortalidad dependen en gran medida de la edad.
+Análogamente, la estructura por sexo está determinada no sólo por la relación entre sexos en el momento de nacer, sino también por los distitnos niveles de mortalidad masculina y femenina; la composición por estado civil es función de la incidencia de la nupcialidad y de la viudedad, dependiendo esta última de la mortalidad.
+
+Finalmente, la influencia de la movilidad, afecta al modo en que se reparten las unidades básicas de una población por edad, sexo, estado civil, etc. 
+
+<span style="color: green">
+***3.Procesos de cohesión y de agregación en una población***
+</span>
+
+Las poblaciones no son meras sumas de individuos ya que en su formación intervienen procesos de cohesión que agregan los individuos en parejas, familias, comunidades o grupos de complejidad y dimensión superiores. Los mismos fenómenos,o sus componentes, que determinan el crecimiento y la estructura de las poblaciones son también poderosos factores de cohesión y repulsión.
+
+Así, las parejas, los núcleos familiares y los conjuntos de familias se forman por:
+
+- Nupcialidad 
+
+- Fecundidad 
+
+- Movilidad 
+
+Y se deshacen por la intervención de sus contrarios: 
+
+- Disolución del matrimonio
+
+- Muerte
+
+- Movilidad de signo contrario.
+
+Es el matrimonio el que casi siempre se halla en el origen
+de la formación de un núcleo familiar. La fecundidad de la pareja incrementa después las dimensiones del núcleo familiar, que también pueden aumentar por la agregación de otras personas ligadas por vínculos de parentesco o de otros núcleos familiares o incluso de extraños. Por el contrario, fuerzas de signo opuesto contrarrestan y destruyen los procesos y los resultados de los fenómenos de cohesión: así, los núcleos o los grupos familiares se reducen, se deshacen y desaparecen por causa de divorcio, muerte, marcha de los hijos y de otros miembros, etc.
+
+Hay que decir, finalmente, que los procesos de agregación y de cohesión son esencialmente selectivos: es decir, que no ejercen la misma presión sobre cada individuo y que la diversa intensidad de su efecto no se debe a factores  casuales.
+Así pues, es también objeto de estudio de la demografía la forma en que se distribuyen y agrupan las poblaciones en parejas, familias, comunidades, etc
+
+<span style="color: green">
+***4. Lo biológico y lo social, o las dos almas de la demografía***
+</span>
+
+Resulta evidente la interdependencia entre los fenómenos demográficos y los sociales, entendiéndose por tales todos aquellos inherentes al particular tipo de organización del conjunto humano. La mortalidad y su intensidad según la edad y el sexo están condicionadas por el tipo de alimentación, por la tecnología médica y su difusión, por el nivel de higiene individual y colectiva, por el entorno físico y geográfico, etc. A su vez, el nivel de fecundidad se verá influido por factores culturales y religiosos, por el conocimiento de las técnicas anticonceptivas y su accesibilidad por parte de las parejas, por el nivel económico, por el grado de apoyo dado a la familia por parte de la sociedad, etcétera. 
+
+Finalmente, existe, entre los factores naturales y sociales por un lado y los fenómenos demográficos por otro, una interacción recíproca que no se limita al efecto de los primeros sobre los segundos, sino que también, aunque con diferente intensidad, se da en sentido inverso.
+
+
+<span style="color: darkblue">
+**FUENTES, ESTADÍSTICAS Y ERRORES**
+</span>
+
+<span style="color: green">
+***1. La demografía y sus métodos***
+</span>
+
+En demografía, como en todas las disciplinas, hay un problema de circularidad entre la naturaleza de los datos de partida, los métodos de análisis y el conocimiento de los problemas: los progresos en los unos favorecen progresos en los otros y viceversa.
+
+1. Se entiende por fuentes el instrumento institucional u organizativo mediante el cual se recogen los datos de interés demográfico. 
+
+2. La naturaleza de los datos, en cambio, se refiere a la unidad objeto de la recogida de datos, a las características descritas, su elaboración y presentación. 
+
+3. La fiabilidad y los errores se refieren a la correspondencia entre el dato estadístico y la realidad que debe describir.
+
+<span style="color: green">
+***2.Las fuentes de datos de stock: los censos***
+</span>
+
+En su acepción moderna, el censo debe cumplir diversos requísitos:
+
+- Tiene que ser una operación de contabilización individual, en el sentido de que cada individuo tiene que ser contabilizado de forma separada con todas las características que el plan de recogida de datos prevé. 
+- Debe ser universal dentro de los límites del territorio censado: es decir, ningún individuo o categoría de persona debe ser descuidado
+- Debe ser simultáneo en el sentido de que la enumeración tiene que referirse a un mismo día u hora para evitar las cuentas dobles o las exclusiones causadas por la movilidad de las personas. 
+
+Finalmente, aunque éste no puede considerarse un requisito esencial, los censos deben tener una periodicidad definida, que normalmente es de 10 años.
+Tal requisito se explica porque las informaciones proporcionadas por un censo se revalorizan y refuerzan mediante la comparación y complemento de las informaciones análogas proporcionadas por el censo anterior.
+
+La enumeración es, efectivamente, individual, pero a menudo las
+características objeto de la recogida de datos suelen ser deducidas a partir de la declaración de otro familiar; también es universal, al menos en sus intenciones,pero no son pocos aquellos que escapan al recuento, incluso en los países mejor organizados; también es, en principio, simultánea, pero las operaciones del censo son tan complejas que, especialmente en los grandes países , requieren muchos días, de forma que el principio de simultaneidad se respeta sólo formalmente.
+
+La organización del censo requiere un conocimiento detallado del territorio que debe ser subdividido minuciosamente en secciones censales, cada una de las cuales es confiada a un agente censal. Dado que en general la unidad de recogida de datos es la familia, el agente debe visitar todos los domicilios y entregar a cada familia un cuestionario; luego debe proceder a su recogida, ayudando a la familia para su cumplimentación y completando eventualmente las informaciones que falten o a menudo, anotándolas él mismo. 
+
+Así pues, los agentes censales deben ser personas bien instruidas y preparadas. Todas las operaciones de recogida, control y elaboración de los cuestionarios (hojas de familia) son largas y complejas, habida cuenta de su gran número. Los planes de codificación, registro y corrección automática, de recopilación, elaboración y publicación de los resultados referidos a millones de unidades requieren un tiempo bastante largo 
+
+<span style="color: green">
+***3. Naturaleza de los datos***
+</span>
+
+La unidad de recogida es normalmente la familia
+
+NOTA: La familia se define como el grupo de personas (dos o más) que, residiendo en la misma vivienda familiar, comparten algunos gastos en común y están vinculados por lazos de parentesco, ya sean de sangre o políticios, e independientemente de su grado.
+Otra definición que podemos encontrar es el conjunto de personas que, residiendo en la misma vivienda, comparten gastos comunes ocasionados por el uso de la vivienda y/o gastos de alimentación. Se pueden distinguir dos tipos de hogares: los unipersonales, formados por una sola persona, y los multipersonales, que están formados por dos o más personas.
+
+Por último, una última observación: el censo, por su naturaleza de encuesta total es una operación que no se presta a entrar en refinados detalles que, sin embargo, resultarían muy útiles para conocer muchos aspectos de la sociedad. Por lo tanto hay que restringirse a plantear preguntas básicas, esenciales, a las que se pueda dar fácil e inequívoca respuesta, proporcionando datos objetivos y lo más precisos posible.
+
+Un censo moderno tiene como objetivo no sólo dar una imagen precisa de la situación demográfica y social de un país, sino también procurar elementos sólidos para posteriores investigaciones parciales y muestrales concebidas *ad hoc* para el estudio de aspectos no tratados por el censo.
+
+<span style="color: green">
+***4. Validez y errores de los datos censales***
+</span>
+
+Según el último censo de población de España en la medianoche del día 1 de marzo de 1991 se contabilizaron 38.872.268 habitantes que vivían habitualmente en el territorio español. El resultado definitivo de la población total adquiere valor legal con su publicación en el Boletín Oficial del Estado; la población residente (es decir, la que vive habitualmente en el territorio) se convierte, de hecho, en la población legal de la nación, de las Comunidades Autónomas, de las provincias y de los municipios.
+
+No obstante, el hecho de que los resultados del censo adquieran validez oficial no es suficiente garantía de su exactitud.
+<div/>
+
