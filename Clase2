@@ -1,0 +1,18 @@
+install.packages ("dplyr")
+require(dplyr)
+mundo<- as_tibble(read.csv(file.choose()))
+nic<- mundo %>%
+  as_tibble() %>%
+  filter (iso_code== "NIC") #para seleccionar solo Nicaragua
+
+ita<- mundo %>%
+  as_tibble() %>%
+  filter (iso_code== "ITA") %>%
+  
+ita <- ita[order(as.Date(ita$dateRep, format="%d/%m/%Y")),]%>%
+#max(ita$new_cases) #seleccionar cuál es el máx. de casos en Italia
+mutate (acumulado =cumsum (total_cases)) %>% 
+filter(between (acumulado, 1000, 3000))#%>% #para filtrar los días que esten en 1000 y 3000
+select(date, total_cases, total_deaths, iso_code, aged_70_older, acumlado, extreme_poverty)
+  
+  
