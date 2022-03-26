@@ -1,0 +1,109 @@
+---
+title: "Clase 16 de marzo"
+author: "Itzia Livera"
+date: '2022-03-16'
+output: html_document
+---
+
+Ecuación compensadora: es uno de los principales elementos de la demografía y se plantea de la siguiente manera
+
+$$P_{t+n}= P_t + N_{t \rightarrow t+n}- D_{t \rightarrow t+n} + I_{t \rightarrow t+n} - E_{t \rightarrow t+n}$$
+
+Donde
+
+* N:nacimientos
+* D:defunciones
+* I: inmigrantes
+* E: emigrantes
+<div/> 
+
+
+Por ejemplo: 
+
+P<sub>2022</sub>= P<sub>2021</sub> + N<sub>2021 al 2022</sub> - D<sub>2021 al 2022</sub> + I<sub>2021 al 2022</sub> - E<sub>2021 al 2022</sub>
+
+$$P_{t+n} - P_t = (N_{t \rightarrow t+n}- D_{t \rightarrow t+n}) +( I_{t \rightarrow t+n} - E_{t \rightarrow t+n})$$
+ **Crecimiento poblacional**
+$$CP=CN+CS$$
+Donde
+
+* CN: Crecimiento natural
+* CS: Crecimiento social 
+
+**NOTA:** La primer parte de la ecuación compensadora va relacionada con el cecimiento poblacional y la segunda parte con el crecimiento social 
+
+Datos:
+
+- Pob<sub>2004</sub>=293,637,000
+
+- Pob<sub>2005</sub>=296,420,000
+
+- N<sub>2004-2005</sub>=4,129,000
+
+- D<sub>2004-2005</sub>=2,425,000
+
+- Pob<sub>2004</sub>= 73,000
+
+**(296,410,000-29,365,7000)=(4,129,000-2,425,000)+(1,122,000-73,000)**
+
+CP=2753000
+
+CN=1704000
+
+CS=1049000
+
+El CS es negativo porque hay países de expulsión como México, o cuando haya más defunciones que nacimientos
+
+Está ecuación vista anteriormente hace manejo de inmigración externa (salir a otros países)
+
+Ahora abordaremos la ecuación compensadora pero con inmigración interna (es entre entidades federativas) 
+
+$$P_{t+n}= P_t + N_{t+n}- D_{t+n} + I_{t+n} - E_{t+n} + \hat{I}_{t+n} -\hat{E}_{t+n}$$
+Donde:
+
+* $$I_{t+n} - E_{t+n}$$ está relacionada con la migración internacional
+
+* $$\hat{I}_{t+n} -\hat{E}_{t+n}$$ está relacionada con la migración interna
+
+por lo tanto ahora será $CP=N+CS_I+\hat{CS}_I$
+
+Sean los datos del año 2005 
+
+|Entidades       |  $$CN$$  | $$CS_I$$ | $$\hat{CS}_I$$ | $$CP$$    |
+|:----------------:|:-------:|:-------:|:--------:|:-------:|
+|EdoMex          |44441  |49607  |-12202  |81846  |
+|Michoacan       |32585  |44347  |3381    |80313  |
+|Chiapas         |35063  |30486  |7391    |72942  |
+|Baja California |6724   |9364   |-2653   |13435  |
+|Nuevo León      |18518  |29314  |4996    |52828  |
+|Jalisco         |2001   |1044   |174     |3219   |
+|Sinaloa         |2629   |699    | -2393  |935    |
+|Guanajuato      |3228   |1940   |1306    |6474   |
+|Total           |145191 |166801 |  0     |311992 |
+
+
+**Tasas de crecimiento poblacional**
+
+1. Tasa de crecimiento anual (población)
+
+$TCA=  \frac {P_{t+1}-P_t}{P_t}$
+
+$TCA= \frac{296,410,000-293,657,000}{293657}=0.009357=0.9357$
+
+2. Tasa de crecimiento exponencial (población)
+
+$TCE=P_te^{rn}$
+
+Donde
+
+$P_t$=población inicial
+
+$r$=tasa de crecimiento exponencial
+
+$n$=número de años
+
+despejamos r
+$$r= \frac{ln(TCE-P_t)}{n}$$
+$$TCE \rightarrow P_{t+n}= P_t e^{rn} \rightarrow ln (\frac{P_{t+n}}{P_t})=rn $$ 
+
+<div/>
