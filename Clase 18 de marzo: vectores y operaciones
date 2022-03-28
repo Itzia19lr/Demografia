@@ -1,4 +1,4 @@
-##### Vectores y operaciones###
+##### Vectores y operaciones
 ent<-c("edomex","dmx","chiap")
 nac<-c(184447,65703,98098)
 def<-c(131133,132751,38662)
