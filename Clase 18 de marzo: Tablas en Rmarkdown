@@ -1,0 +1,19 @@
+---
+title: "Tablas en Rmarckdowm"
+autor: "Itzia Livera"
+output: html_document
+date: '2022-03-18'
+---
+install.packages("printr")
+requerir (imprimir)
+a<-c(1,2,3)
+b <- c("a","b","c")
+datos<- datos.marco(a,b)
+```{r coches}
+resumen (coches)
+install.packages("printr")
+requerir (imprimir)
+a<-c(1,2,3)
+b <- c("a","b","c")
+datos<- datos.marco(a,b)
+tabla (datos)
