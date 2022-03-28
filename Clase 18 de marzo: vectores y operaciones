@@ -1,0 +1,12 @@
+##### Vectores y operaciones###
+ent<-c("edomex","dmx","chiap")
+nac<-c(184447,65703,98098)
+def<-c(131133,132751,38662)
+cabeza (CN)
+CN<-nac-def
+inmI<-c(30788,18813,4986)
+emiI<-c()
+internos<-c(5190562,1679063,174961)
+eminternos<-c(1344291,4955432,678362 )
+CSi<-internos-eminternos
+cabeza (CSi)
