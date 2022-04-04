@@ -1,0 +1,205 @@
+---
+title: "Clase 25 de marzo"
+author: "Itzia Livera"
+date: '2022-03-28'
+output: html_document
+---
+
+<div style="text-align: justify">
+<span style="color: darkblue">
+**Tiempo de duplicidad de una población**
+</span>
+
+Lo que se intenta plantear y conocer es en qué tiempo una población determinada se duplica, pera lo anterior se plantea la siguiente ecuación, que está basada en la tasa de crecimiento exponencial:
+
+- $p_t= \text{población inicial}$
+- $p_{t+n}=\text{población final}$ 
+- $r=\text{tasa de crecimiento exponencial}$ 
+- $n=\text{tiempo o los años}$
+- $p_{t+n}= p_t*e^{rn}= \text{tasa de crecimiento exponencial}$
+
+<span style="color: red">
+***NOTA:***
+</span>
+Para conocer cuando se duplica la población necesitamos despejar n, porque queremos conocer cuántos años se tardaría una población en duplicarse 
+
+- Procedimiento para despejar n
+
+$\frac{p_{t+n}}{pt}=e^{rn}$
+
+$\frac{p_{t+n}}{pt}=2$
+
+$2=e^{rn}$
+
+$ln(2)=r*n$
+
+Tomando la tasa de crecimiento igual a ***r=1.399829***
+
+$0.6931=(0.01399829)*n$
+
+$n=0.6931/0.1399829$
+
+$n=69.31/1.399829$
+
+$n=49.513119$
+
+Si tenemos una tasa de crecimiento exponencial de 1.399829 entonces el tiempo de duplicación de nuestra población será de 49.51 años
+
+
+* **Ejercicio 1**: queremos conocer en qué tiempo se va duplicar la población con la tasa de crecimiento del año 1970, sabemos que la tasa de crecimiento era de 3.1 y además conocemos que en 1970 había 50.6 millones de personas
+
+¿En cuánto tiempo en México tendríamos 100 millones de personas con una tasa de crecimiento de 3.1?
+
+$\frac{p_{t+n}}{pt}=e^{rn}$
+
+dado que $\frac{p_{t+n}}{pt}=2$
+
+$2=e^{rn}$
+
+$ln(2)=r*n$
+
+se conoce que la tasa de crecimiento es de **r=3.1%** o **r=0.031**  
+
+$0.6931=(0.031)n$
+
+$n=0.6931/0.031$
+
+$n=69.31/3.1$
+
+$n=49.513119$
+
+**R=22.29**
+
+
+* **Ejercicio 2**
+
+En el año 2000 la tasa de crecimiento era de 1.4, ¿en cuánto tiempo en México tendríamos 100 millones de personas con una tasa de crecimiento de 3.1?
+
+$\frac{p_{t+n}}{pt}=e^{rn}$
+
+dado que $\frac{p_{t+n}}{pt}=2$
+
+$2=e^{rn}$
+
+$ln(2)=r*n$
+
+se conoce que la tasa de crecimiento es de **r=1.4%** o **r=0.014**  
+
+$0.6931=(0.014)n$
+
+$n=0.6931/0.014$
+
+$n=69.31/1.4$
+
+$n=49.513119$
+
+**R=49.51**
+
+<span style="color: darkblue">
+**Dinámica demográfica**
+</span>
+
+En la dinámica demográfica se relaciona con el tamaño, la composción, las pérdidas y las ganancias de la población.
+
+El tamaño se refiere a la cantidad de personas que existen en un territorio en un tiempo determinado, la composición de una población se refiere al sexo, grupos de edad (características de una población). Las pérdidas y ganancias se vinculan con la fecundidad, mortalidad(pérdidas) y la migración.
+
+<span style="color: darkblue">
+**Tasas brutas en la población**
+</span>
+
+Una tasa bruta como su nombre lo indica  no considera la composición de la población (sexo, edad, uniones o matrimonios)
+
+La vamos a definir de la siguiente manera:
+
+$TB=\frac{\text{Evento}}{\text{Población media}}$
+
+La población media se define como el promedio de población durante un período de tiempo.
+La población a mitad de año normalmente se relaciona con los datos del censo y se asocia a conocer la población a mitad de año (30 de junio).
+
+Tenemos la población del año 2004 es de 293,657,000 y la población del año 2005 es 296,410,000 entonces la población media del año 2004 - 2005 es la siguiente:
+
+$$Pmed=\frac{293,657,000 + 296,410,000}{2}= 295,033,500$$
+
+Calcular tasas brutas de los siguientes eventos:
+
+Tasas brutas de Estados Unidos del 2004 al 2005
+
+Evento:
+
+- Nacimientos: 4,129,000
+- Muertes: 2,425,000
+- Inmigración: 1,122,000
+- Emigración: 73,000
+
+Entonces:
+$$TBN=\frac{4129000}{295033500} = 0.01399502*1000=13.99$$ 
+
+**Interpretación:** por cada 1000 personas en Estados Unidos en el período 2004 - 2005 nacen 14 personas.
+
+$$TBM=\frac{2425000}{295033500}=0.008219*1000 =8.219$$
+
+**Interpretación:** por cada 1000 personas en EUA en el período 2004 - 2005 se mueren 8 personas
+
+$$TBI=\frac{1122000}{295033500}=0.003802*1000=3.8$$ 
+
+**Interpretación:** por cada 1000 personas en EUA en el período 2004 - 2005 inmigran 3
+
+$$TBE=\frac{73000}{295033500}=0.0002474*100000= 24.74$$
+
+**Interpretación:**por cada 100000 personas en EUA en el período 2004 - 2005 emigran 24.
+
+<span style="color: red">
+***NOTA:***
+</span>
+Se recomienda multiplicar po 100 o por 1000, dependiendo de las circunstancias
+
+<span style="color: darkblue">
+**Tasas específicas**
+</span>
+
+Estas tasas si tienen relación con las características poblacionales (sexo, grupos de edad).
+
+El planteamiento de las tasas específicas es el siguiente:
+
+$${Te}^{i}=\frac{E^{i}}{{Pob}^{i}}$$
+- $${Te}^{i}=\text{tasa específica de un evento con las características i}$$
+- $$E^{i}=\text{es el número del evento de características i (15-19)}$$
+- $$Pob^{i}=\text{es la población media con características i (15-19)}$$
+
+<span style="color: darkblue">
+**Proporción de sexos**
+</span>
+
+Este es otro indicador demográfico que permite conocer la cantidad de hombres que existen con relación a las mujeres. 
+
+La proporción de sexos es un indicador que muestra el balance entre el número de hombres y mujeres.
+
+Por ejemplo, se puede calcular la proporción masculina y se calcula dividiendo el número de hombres entre el número de mujeres. 
+
+Se define de la siguiente manera: 
+
+$$PS^i = \frac{{Hombres^i}}{{Mujeres^i}}$$
+**Ejemplo**
+
+Datos:
+
+- Hombres (0 a 4 años) en el 2008= 8226630 en Brasil
+- Mujeres (0 a 4 años) en el 2008= 7976611 en Brasil
+- Hombres (0 a 4 años) en el 2008= 4153690 en Italia
+- Mujeres (0 a 4 años) en el 2008= 71373687 en Italia
+
+<span style="color:green">
+**Brasil**
+</span>
+
+$$PS^{\text{0 a 4}}=\frac{8226630}{7976611}=1.031$$
+Para una mejor interpretación multiplicamos por 100 y tendríamos que en Brasil en el grupo de edad de 0 a 4 años hay 103 hombres por cada 100 mujeres.
+
+<span style="color:green">
+**Italia**
+</span>
+
+$$PS^{\text{0 a 4}}= \frac{1453690}{1373687}=1.058$$
+
+Para mejor interpretación multiplicamos por 100 y tendríamos que en Ialia en el grupo de edad de 0 a 4 años hay 106 hombres por cada 100 mujeres. 
+<div/>
