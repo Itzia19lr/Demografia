@@ -1,0 +1,78 @@
+---
+title: "Clase 30 de marzo"
+author: "Itzia Livera"
+date: '2022-03-30'
+output: html_document
+---
+<div style="text-align: justify">
+<span style="color: darkblue">
+**DATOS DEL ESTADO DE COAHUILA**
+</span>
+
+<span style="color:green">
+- **Tasa bruta de nacimientos**
+</span>
+
+$TBN_{2020}=\frac{3100000}{3147000}= 0.9850651 * 1000= 985.06$
+
+***Interpretación:*** por cada 1000 habitantes del estado de Coahuila en el período 2020 nacieron 985 personas 
+
+<span style="color:green">
+- **Tasa bruta de mortalidad**
+</span>
+
+$TBM_{2020}=\frac{1086094}{3147000}= 0.3451204 * 1000= 345.12$
+
+***Interpretación:*** por cada 1000 habitantes del estado de Coahuila en el período 2020 murieron 345 personas
+
+<span style="color:green">
+- **Tasa bruta de inmigración** 
+</span>
+
+$TBI_\text{2020}=\frac{83587}{3147000}=0.02656085 * 1000=26.56$
+***Interpretación:*** por cada 1000 habitantes del estado de Coahuila en el período 2020 inmigraron 26 personas
+
+<span style="color:green">
+- **Tasa bruta de emigración**
+</span>
+
+$TBE_{2020}=\frac{58980}{3147000}= 0.01874166 * 1000 =18.74$
+
+***Interpretación:*** por cada 1000 habitantes del estado de Coahuila en el período 2020 emigraron 18 personas
+
+
+<span style="color:darkblue">
+**Proporción de sexos al nacimiento** 
+</span>
+
+La propoporciòn de sexos al nacimiento se define de la siguiente manera:
+
+$$PSN=\frac{nac_{h}}{nac_{m}}$$
+
+$PSM_\text{México}=\frac{828944}{800264}=1.03 * 100$
+$PSM_\text{México}=103$
+
+**Interpretación:** en México en el año 2020 nacen 103 niños por cada 100 niñas. 
+
+<span style="color:darkblue">
+**Proporción de niños(mujeres y hombres) por mujer**
+</span>
+
+$PNN=\frac{POB_{\text{<5 años}}}{pobfem}$
+
+$POB_{\text{<5 años}}= 2,827,377$
+
+$pobfem_{\text{15-44}}= 23,855,033$
+$PNM=\frac{2,827,377}{23,855,033}=0.118523$
+
+$\text{por lo tanto } PNM= 11.85233$
+
+<span style="color:green">
+***Tasa de dependencia***
+</span>
+
+La tasa de dependencia se relaciona a las personas que tienen más posibilidades de ser dependientes.
+
+$TD=\frac{pob_{\text{0-14}} + pob_{\text{65 y màs}}}{pob_{\text{15-64}}}$
+</span>
+
