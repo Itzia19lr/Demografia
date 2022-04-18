@@ -1,0 +1,54 @@
+---
+título: "Clase 8 de abril"
+autor: "Itzia Livera"
+fecha: '2022-04-06'
+salida: html_document
+---
+**BASE DE DATOS DE AGUASCALIENTES**
+
+###########################################################################################
+install.packages("dplyr")
+require (dplyr)
+agsmuj1<- ags %>%
+as_tibble ()%>%
+mutate(gpoeda = case_when (EDAD>=0 & EDAD <= 4 ~ 1,
+EDAD >=5 & EDAD <= 9 ~ 2,
+EDAD >=10 & EDAD <= 14 ~ 3,
+EDAD >=15 & EDAD <= 19 ~ 4,
+EDAD >=20 & EDAD <= 24 ~ 5,
+EDAD >=25 & EDAD <= 130 ~ 6, conyu = case_when (SITUA_CONYUGAL==1 | (SITUA_CONYUGAL>=5 & SITUA_CONYUGAL<=7) ~1, SITUA_CONYUGAL>=2 & SITUA_CONYUGAL<=4 ~2, SITUA_CONYUGAL==8 ~3,
+SITUA_CONYUGAL==9 ~ 4 )) %>%
+filter (SEXO ==3 & (EDAD >= 50 & EDAD <=130)) %>%
+select (SEXO, MUN, INGTRMEN, EDAD, SITUA_CONYUGAL, conyu, gpoeda) 
+
+agsmuj11%>%
+group_by(MUN)%>%
+summarise (mediana=median (INGTRMEN, na.rn=T))
+
+names (agsmuj)
+#########################################################################################
+table (agsmuj$SEXO)
+table(agsmuj$EDAD)
+table(agsmuj$gpoeda)
+table(ags$gpoeda)
+
+base2 <- ags %>% 
+as_tibble () %>% 
+filter(MUN == 1 | MUN==2)
+
+#Otra forma de realizarlo, es de la siguiente manera: 
+install.packages("dplyr") 
+require(dplyr)
+ge <- ags %>% 
+as_tibble () %>% 
+mutate(conyu = case_when (SITUA_CONYUGAL==1 | (SITUA_CONYUGAL>=5 & SITUA_CONYUGAL<=7) ~1, SITUA_CONYUGAL>=2 & SITUA_CONYUGAL<=4 ~2, SITUA_CONYUGAL==8 ~3,
+SITUA_CONYUGAL==9 ~ 4 )) 
+table(ge$conyu) 
+
+
+#Para tabla de Aguascalientes
+install.packages("questionr")
+required (questionr)
+wtd.table(ags$SEXO, weights=ags$FACTOR)
+wtd.table(ags$gpoeda, weights=ags$FACTOR)
+table(ags$gpoeda)
