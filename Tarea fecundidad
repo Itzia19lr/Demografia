@@ -1,0 +1,18 @@
+# Tarea------------------------------------------------------------------------
+#¿Cuántos hijos(as) puede tener una mujer durante su vida fertil? R= 40 hijos
+#Suponemos que inicia a los 15 años y termina a los 45 años.
+
+#Opción 1----------------------------------------------------------------------
+#Dado que el embarazo duda 9 meses, y de 15 a 45 años la diferencia es de 30 años, entonces:
+((45-15)*12)/9
+
+#Respuesta= 40 hijos 
+
+#Opción 2----------------------------------------------------------------------
+hijos <- function(edad1, edad2) {
+  r1 <- (edad2-edad1)*12
+  resultado <- r1/9
+  return(resultado)
+}
+
+hijos(edad1=15, edad2=45)
