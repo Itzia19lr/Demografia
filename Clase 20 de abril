@@ -1,0 +1,122 @@
+---
+title: "Clase 20 de abril"
+author: "Itzia Livera"
+date: '2022-04-20'
+output: html_document
+---
+<span style="color: darkblue">
+**FECUNDIDAD**
+</span>
+
+<div style="text-align: justify">
+
+En la demografía existen 2 conceptos que es necesario diferenciar 
+
+1. Fecundidad se refiere al número de hijos que tienen las mujeres
+2. Fertilidad se refiere a la capacidad biológica de la mujer de tener hijos 
+
+<span style="color: green">
+**Fecundidad**
+</span>
+
+Factores que impactan en la fecundidad de las mujeres:
+
+- Económica
+- Estado civil
+- Fisiológicos
+- Educación 
+- Cultura 
+- Familia
+- Movilidad
+- Acceso a anticonceptivos
+- Mercado de trabajo
+- Fertilidad
+- Política (Ley General de la Población 1974, y CONAPO)
+
+
+<span style="color: green">
+**Tasa bruta de natalidad**
+</span>
+
+$TBN=\frac{\text{Nacimientos}}{\text{Población}}$
+
+Normalmente esta TBN se utiliza de manera anual y se interpreta en miles de personas. 
+
+*Ejemplo*
+
+$\text{Nacimientos}= 470,900$
+
+$\text{Población}=27,720,000$
+
+$\text{TBN}=\frac{470,900}{27,720,000}= 0.017$
+
+La TBN también se puede interpretar multiplicandola por 1000, es decir, que en está población nacen 17 niños(as) por cada mil personas. 
+
+<span style="color: darkorange">
+**1. Tasas específicas de fecundidad**
+</span>
+
+- Tasa especifica de fecundidad se define de la siguiente manera: 
+ 
+ $$tef=\frac{Nacimientos^{i}}{{Pob^{i} femenina}}$$
+ 
+ 
+<span style="color: darkorange">
+**2. Tasas generales de fecundidad**
+</span>
+
+$$TGF=\frac{\sum_{i=15}^{44}nacimientos^{i}}{\sum_{i=15}^{44}Pob^{i}femenina}$$
+
+
+- Ejemplo: 
+
+JAPÓN
+
+G_edad <- c ("15-19","20-24","25-29","30-34","35-39","40-44")
+Nac_vivos <- c(14687,116809,307767,389795,209707,31270)
+Pobf <- c (2974000,3404000,3688000,4286000,4776000,4243000)
+Tef <- c(4,938467, 34,31522, 83,45092, 90,9461, 43,9085,7,369786)
+
+
+(14687/2974000)*1000
+(116809/3404000)*1000
+(307767/3688000)*1000
+(389795/4286000)*1000
+(209707/4776000)*1000
+(31270/4243000)*1000
+
+Japon <- data.frame(G_edad,Nac_vivos,Pobf,Tef)
+
+
+- Ejercicio
+
+Calcular la TEF y TGF para México en el año 2010
+G2edad <- c ("15-19","20-24","25-29","30-34","35-39","40-44")
+Nac_vivos2 <- c(283536, 481311, 415706, 284927, 136289, 31270)
+Pobf2 <- c (5505991,5079067, 4582202, 4444767, 4328249, 3658904)
+Tef2 <- c(4.938467,34.31522, 83.45092, 90.9461, 43.9085,7.369786)
+
+
+(283536/5505991)*1000
+(481,311/5079067)*1000
+(415706/4582202)*1000
+(284927/4444767)*1000
+(136289/4328249)*1000
+(31270/3658904)*1000
+
+Mexico <- data.frame(G2edad,Nac_vivos2,Pobf2,Tef2)
+
+sum(283536, 481311, 415706, 284927, 136289, 31270)
+sum(5505991,5079067, 4582202, 4444767, 4328249, 3658904)
+
+Para la suma de nacimientos en total es de: 1633039
+
+Para la suma de la población femenina es de: 27599180
+
+Calcular:
+
+1633039/27599180
+
+$TGF=\frac{1633039}{27599180}= 0.05916984$
+
+</span>
