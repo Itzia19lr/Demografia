@@ -1,0 +1,45 @@
+#Código completo------------------------------------- 
+
+install.packages("ggplot2")
+require("ggplot2")
+#Gráfica de tasa específica de fecundidad de Japón----------------------------------------------------------
+
+G_edad <- c ("15-19","20-24","25-29","30-34","35-39","40-44")
+Nac_vivos <- c(14687,116809,307767,389795,209707,31270)
+Pobf <- c (2974000,3404000,3688000,4286000,4776000,4243000)
+Tef <- c(4.938467, 34.31522, 83.45092, 90.9461, 43.9085,7.369786)
+Japon <- data.frame(G_edad,Nac_vivos,Pobf,Tef)
+
+ggplot(Japon, aes(as.character(G_edad), y=Tef)) + geom_point(colour="mediumpurple1", size = 3)+ geom_line(color="mediumpurple1", size=1, group="character") +
+  labs(x = "Grupo de edad", y =  "Tasa específica de fecundidad") +   theme(axis.title.x = element_text(face="bold", vjust=-0.5, colour="lightseagreen", size=rel(1))) +
+  theme(axis.title.y = element_text(face="bold", vjust=1.5, colour="lightseagreen", size=rel(1))) + scale_x_discrete(breaks = c("15-19", "20-24", "25-29", "30-34", "35-39", "40-44")) +
+  ggtitle ("GRÁFICA DE TASA ESPECÍFICA DE FECUNDIDAD DE JAPÓN") +   theme (plot.title = element_text(family="Arial",size=rel(1), vjust=2,face="bold", color="midnightblue", lineheight=1.5))
+
+#Gráfica de tasa específica de fecundidad de México----------------------------------------------------------
+
+G2edad <- c ("15-19","20-24","25-29","30-34","35-39","40-44")
+Nac_vivos2 <- c(283536, 481311, 415706, 284927, 136289, 31270)
+Pobf2 <- c (5505991,5079067, 4582202, 4444767, 4328249, 3658904)
+Tef2 <- c(51.49591,94.76366,90.72188,64.10392,31.48825,8.546275)
+
+Mexico <- data.frame(G2edad,Nac_vivos2,Pobf2,Tef2)
+
+ggplot(Mexico, aes(as.character(G2edad), y=Tef2)) + geom_point(colour="goldenrod1", size = 3)+ geom_line(color="goldenrod1", size=1, group="character") +
+  labs(x = "Grupo de edad", y =  "Tasa específica de fecundidad") +   theme(axis.title.x = element_text(face="bold", vjust=-0.5, colour="chartreuse3", size=rel(1))) +
+  theme(axis.title.y = element_text(face="bold", vjust=1.5, colour="chartreuse3", size=rel(1))) + scale_x_discrete(breaks = c("15-19", "20-24", "25-29", "30-34", "35-39", "40-44")) +
+  ggtitle ("GRÁFICA DE TASA ESPECÍFICA DE FECUNDIDAD DE MÉXICO") +   theme (plot.title = element_text(family="Arial",size=rel(1), vjust=2,face="bold", color="midnightblue", lineheight=1.5))
+
+#Grafica de tasa específica de fecundidad de México y Japón-------------------------------------------
+
+ggplot() + 
+  geom_point(data = Japon, aes(G_edad,Tef), 
+             colour="goldenrod1",
+             size = 3)+
+  geom_point(data = Mexico, aes(G2edad,Tef2), 
+             colour="red", size = 3)+
+  geom_line(data = Japon, aes(G_edad,Tef),color="goldenrod1", size=1, group="character")+ 
+  geom_line(data = Mexico, aes(G2edad,Tef2),color="red", size=1, group="character") +
+  labs(x = "Grupo de edad", y =  "Tasa específica de fecundidad") + 
+  theme(axis.title.x = element_text(face="bold", vjust=-0.5, colour="chartreuse3", size=rel(1))) +   theme(axis.title.y = element_text(face="bold", vjust=1.5, colour="chartreuse3", size=rel(1)))+
+  ggtitle ("GRÁFICA DE TASA ESPECÍFICA DE FECUNDIDAD DE JAPÓN Y MÉXICO")  +   theme (plot.title = element_text(family="Arial",size=rel(1), vjust=2,face="bold", color="midnightblue", lineheight=1.5))
+
