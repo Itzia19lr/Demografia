@@ -1,0 +1,56 @@
+---
+title: "Clase 27 de abril"
+author: "Itzia Livera"
+date: '2022-04-27'
+output: html_document
+---
+#Artículo: El elogio a la pereza, Jornada
+
+**Tasas específicas de fecundidad**
+
+*Medidas sintéticas de la fecundidad* 
+
+<div style="text-align: justify">
+
+Para plantear estas medidas tenemos que partir de algunos supuestos :
+
+1. El grupo poblacional está cerrado a la migración.
+2. El grupo está basado en solo un año, es decir, las tasas o medidas sintéticas que se plantean solo se van a realizar para un año en específico. 
+3. Las mujeres no se mueren o no existe moratalidad femenina hasta qe concluyan su período fértil (45 años).
+
+Las medidas sintéticas son las siguientes:
+
+- Tasa general de fecundidad: 
+
+$TGrf= \sum TEF$
+
+$TEF---- TGrF= \sum TEF$
+
+- Tasa bruta de reproducción
+
+$TBR= \sum TEF *S $
+
+donde 
+
+TEF= tasa específica de fecundidad
+
+S= probabilidad de sobrevivencia de las mujeres
+
+- Tasa neta de reproducción 
+
+$TNR= sum (TEF)* S * PS$
+
+donde:
+
+TEF= tasa específica de fecundidad
+
+S= probabilidad de sobrevivencia de las mujeres
+
+PS= probabilidad de una mujer de sobrevivir de la edad cero hasta la edad de reproducción 
+
+#Aquí ya viene ggplot2 
+
+install.packages("tidyverse")
+requiere(tidyverse)
+
+</span>
