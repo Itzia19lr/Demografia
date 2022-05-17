@@ -1,0 +1,29 @@
+---
+title: "Clase 29 de abril"
+author: "Itzia"
+date: "17/5/2022"
+output: html_document
+---
+<div style="text-align: justify">
+Es importante recalcar que para calcular tasas con edades agrupadas quinquenales los calculos deben ser multiplicados por n, en este caso n=5
+
+$TGF= 5* \sum tef$
+
+$S= \frac {100}{100 + \text{Proporción de sexos}}$
+
+$\text {Propsexo}= \frac {\text {nac. hombres}}{\text{nac mujeres}}$
+
+Consideremos los siguientes datos:
+gpoedad <-c("15-19", "20-24", "25-29", "30-34", "35-39", "40-44")
+nactotales <- c(12130,42103,80933,93107,55985,11480)
+mujeres <- c(727168,782583,791698,751566,814971,769345,769345)
+nacmujeres <- c(5895,20461,39331,45247,27207,5579)
+tgf <- (0.01668,0.0538,0.1022,0.1239,0.06869, 0.01492)
+nachombres <- (6235,21642,41602,47860,28778,5901)
+
+$TGF= 5* \sum tef= 0.3802*5= 1.901$
+$\text{Proporción de sexos}= \frac {150018}{143720}=1.0577$
+$S= \frac {100}{100+105.77}= 0.4859$
+$TBR=5* \sum tef* s= 5*0.376226*0.4859= 0.9230$
+
+<div/>
