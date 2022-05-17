@@ -1,0 +1,81 @@
+---
+title: "Clase 4 de mayo"
+author: "Itzia"
+date: "6/5/2022"
+output: html_document
+---
+<div style="text-align: justify">
+
+**Tasas en edad agrupada**
+
+Todas las fórmulas vistas se multiplican por n
+
+Ejemplo:
+
+gpoedad<-c("15-19", "20-24", "25-29", "30-34", "35-39", "40-44")
+nac<-c(12130,42103, 80933, 93107, 55985, 11480)
+pobfem<-c(727168, 782583, 791698,751566,814971,769345)
+nacfem<-c(5895, 20461, 39331, 45247, 27207, 5579)
+nachom<- nac-nacfem
+propsex=sum(nachom)/sum(nacfem)*100
+S=(100/(100+propsex))
+tef<- (nac/pobfem)
+teffem<-(nacfem/pobfem)
+n=5
+TGrF = sum((nac)/pobfem)*5
+TGF <- sum(tef)*n
+TBR <- TGF*S
+tasas <- data.frame(gpoedad, nac, pobfem, nacfem, nachom, tef, teffem)
+
+**Link del banco mundial:** link: datos.bancomundial.org
+
+Instrucciones: Hacer un análisis comparativo de los dos municipios elegidos del Estado de México con respecto a las TG y TBR. En Rmardown añadir un poco de contexto sobre las diferencias de los municipios. 
+
+- Calcular tef(nac/pobfem)
+- Calcular tef mujer(nacfem/pobfem)
+
+**Datos Amecameca**
+
+gpoedadA<-c("15-19", "20-24", "25-29", "30-34", "35-39", "40-44")
+nacA<-c(228, 353, 305, 164,83,22)
+pobfemA<-c(2376,2299,2317,2033,2059,2026)
+nacfemA<-c(118,162,151,83,37,11)
+nachomA<- nacA-nacfemA
+propsexA=sum(nachomA)/sum(nacfemA)*100
+SA=(100/(100+propsexA))
+tefA<- (nacA/pobfemA)
+teffemA<-(nacfemA/pobfemA)
+n=5
+TGrFA= sum((nacA)/pobfemA)*5
+TGFA <- sum(tefA)*n
+TBRA <- TGFA*SA
+tasasA <- data.frame(gpoedadA, nacA, pobfemA, nacfemA, nachomA, tefA, teffemA)
+
+**Datos Ecatepec**
+
+gpoedadE<-c("15-19", "20-24", "25-29", "30-34", "35-39", "40-44")
+nacE<-c(1973,4253,4014,2642,1354, 378)
+pobfemE<-c(4776,4489,4411,3762,3786,3786)
+nacfemE<-c(999, 2024, 1973, 1338,658,181)
+nachomE<- nacE-nacfemE
+propsexE=sum(nachomE)/sum(nacfemE)*100
+SE=(100/(100+propsexE))
+tefE<- (nacE/pobfemE)
+teffemE<-(nacfemE/pobfemE)
+n=5
+TGrFE= sum((nacE)/pobfemE)*5
+TGFE <- sum(tefE)*n
+TBRE <- TGFE*SE
+tasasE <- data.frame(gpoedadE, nacE, pobfemE, nacfemE, nachomE, tefE, teffemE)
+
+
+Recordando la definición de la **tasa específica de fecundidad** es el número de nacimientos que ocurren durante un determinado año o período de referencia por cada 1,000 mujeres en edad reproductiva clasificada en grupos simples o quinquenales.
+Para poder analizar las tasas calculadas tenemos que considerar el total de población femenina de cada municipio, la población total femenina  de Amecameca es de 28001 y por otro lado la de Ecatepec es de 846803, por ende al tener poblaciones diferentes no podemos comparar directamente las entidades. 
+
+De acuerdo a las tabla de Amecameca observamos que la TEF más alta se encuentra en el rango de edad de 20-24 años y fue de aprox 154 nacimientos por cada 1000 mujeres que ocurrieron en 2020, y la TEFfem es de 70 nacimientos de niñas por cada 1000 mujeres en 2020.
+
+Finalmente examinando la tabla de Ecatepec, la TEF más alta se encuentra también en el rango de edad de 20-24 años, con un valor de 0.94742704, es  decir, 947 nacimientos por cada 1000 mujeres en e año de 2020, y la TEFfem es de 451 nacimientos de niñas por cada 1000 mujeres en 2020.
+
+Como conclusión pudimos observar que en ambos municipios la tasa más alta fue en el rango de edad de 20-24 años, sería demasiado interesante indagar en los factores que intervienen en estas situaciones y averiguar más a fondo si se repite el mismo caso en demás municipios o incluso estados. 
+
+<div/>
