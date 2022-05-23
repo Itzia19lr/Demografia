@@ -1,0 +1,86 @@
+---
+title: "Clase 18 de mayo"
+author: "Itzia Yamilé Livera Ramírez"
+date: '2022-05-18'
+output: html_document
+---
+Clase 18 de mayo
+**MORTALIDAD**
+  
+- Esperanza de vida sea mayor
+- Pensiones (comienzan a darse desde los 65 años aprox.)
+- Gastos de salud(privado y público)
+- Presión hacia Población EconÓmicamente Activa (PEA) -> Ocupados y desocupados
+
+- Muerte: Desaparición de toda evidencia de vida en cualquier tiempo después de que una persona haya nacido viva
+
+**Tasa Bruta de Mortalidad**
+
+$TBM_{T \rightarrow t+n}=\frac{M_{t \rightarrow t+n}}{P{t \rightarrow t+n}}$
+  
+Ejemplos: 623300
+
+Población a mitad de año: 127000000
+
+$TBM= \frac{623300}{127000000}= 0.004907$
+$TBM*100= 4.9$
+  
+  La TBM se interpreta como 4.9 muertes por cada 1000 personas.
+
+**-Tasa específica de mortalidad (TEM):** la tasa específica de mortalidad calcula la mortalidad por grupo de edad y permite conocer la tasa por cada grupo de edad. 
+
+La TEM se calcula porque la mortalidad es diferenciada por edad o grupo de edad.
+
+Por ejemplo, las personas de 0 a 9 a{os tienen una mayor mortalidad que las personas de 1 a 4 años o 5 a 9 años.
+
+  $TEM_{t\rightarrow t+n}=\frac{M_{t \rightarrow t+n}}^i{P{t \rightarrow t+n}}^i$    
+  #la P es con una raya arriba
+  $i= \text{grupo de edad}$
+  $M_{t \rightarrow t+n}= \text {Muertes del año t a t+n}$
+  ${P{t \rightarrow t+n}}^i= \text{Población a mitad de año t a t+n}$
+    
+Ejemplo 
+Grupodeedad -> c("<1", "1 a 4", "65 a 69", "70 y más")
+Muertes -> c(8321,2132,95748,157197)
+PobMitadAño -> c(12243521,12873410,5872590,1735817)
+TEM -> c(0.000679,0.00016,0.0163,0.0905)
+TEM*mil -> c(67,16,1630,9050)
+    
+link:https://www.inegi.org.mx/sistemas/olap/Proyectos/bd/continuas/mortalidad/MortalidadGeneral.asp
+    
+
+CÓDIGO -----------------------------------------------------------------------------------------------
+bcs <- read.csv (file.choose())
+    require (dplyr)
+    bcs1 <- bcs %>%
+      as_tibble() %>%
+      mutate (gpoed = case_when(EDAD == 0 ~ 0,
+                                EDAD >= 1 &  EDAD <=4~ 1,
+                                EDAD >= 5 &  EDAD <=9~ 2,
+                                EDAD >= 10 &  EDAD <=14~ 3,
+                                EDAD >= 15 &  EDAD <=19~ 4,
+                                EDAD >= 20 &  EDAD <=24~ 5,
+                                EDAD >= 25 &  EDAD <=29~ 6,
+                                EDAD >= 30 &  EDAD <=34~ 7,
+                                EDAD >= 35 &  EDAD <=39~ 8,
+                                EDAD >= 40 &  EDAD <=44~ 9,
+                                EDAD >= 45 &  EDAD <=49~ 10,
+                                EDAD >= 50 &  EDAD <=54~ 11,
+                                EDAD >= 55 &  EDAD <=59~ 12,
+                                EDAD >=60 &  EDAD <=64~ 13,
+                                EDAD >= 65 &  EDAD <=69~ 14,
+                                EDAD >= 70 &  EDAD <=74~ 15,
+                                EDAD >= 75 &  EDAD <=79~ 16,
+                                EDAD >= 80 &  EDAD <=84~ 17,
+                                EDAD >= 85 &  EDAD <=109~ 18,
+                                EDAD == 999 ~ NA_real_)) %>%
+      select (gpoed, ENT, EDAD, FACTOR)
+    
+    
+    require (questionr)
+    t1 <- data.frame( wtd.table (bcs1$gpoed, weights = bcs1$FACTOR))
+    t1
+    defbcs <- read.csv((file.choose()))
+    def1 <- data.frame(defbcs, t1)
+    tem <- def1$defunciones/def1$Freq
+    tem
