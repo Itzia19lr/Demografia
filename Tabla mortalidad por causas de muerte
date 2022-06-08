@@ -1,0 +1,59 @@
+#TAREA
+
+install.packages("flextable")
+library(flextable)
+install.packages("gt")
+library(gt)
+install.packages("dplyr")
+library(dplyr)
+
+# DURANGO---------------------------------------------------------------
+Causas.de.muerte <- c("Enfermedades del corazón", "COVID 19", "Diabetes mellitus", "Tumores malignos", "Influenza y neumonía")
+Porcentaje.m.mas <- c(55.41,60.90,50.58,50.00,58.39)
+Porcentaje.m.fem <- c(44.54,39.09,49.41,50.00,41.60)
+Distribucion.causa <-c(27.28,20.68,10.69,8.50,5.16)
+Tasa<- c(200.92,152.37,78.72,62.62,38.02)
+Dur<- data.frame(Causas.de.muerte, Porcentaje.m.mas, Porcentaje.m.fem, Distribucion.causa,Tasa)
+
+
+Durango <- flextable(head(Dur), col_keys = c("Causas.de.muerte", "Porcentaje.m.mas", "Porcentaje.m.fem", "Distribucion.causa","Tasa"))
+Durango <- theme_vanilla(Durango)
+Durango <- set_caption(Durango, caption = "Tabla de Durango. Distribución porcentual por mayores causas de muerte, por sexo y tasa de mortalidad por causas")
+Durango <- add_footer_lines(Durango, "Fuente: elaboración propia")
+Durango
+
+
+
+#QUINTANA ROO------------------------------------------------------------
+Causas.de.muerteQR <- c("COVID 19", "Enfermedades del corazón", "Diabetes mellitus", "Tumores malignos", "Agresiones")
+Porcentaje.m.masQR <- c(66.86,60.52,52.87,60.33,70.40)
+Porcentaje.m.femQR <- c(33.13,46.18,40.28,52.53,32.04)
+Distribucion.causaQR <-c(24.95,11.82,11.59,7.72,5.20)
+TasaQR<- c(147.30,69.80,68.40,45.58,30.73)
+QR<- data.frame(Causas.de.muerteQR, Porcentaje.m.masQR, Porcentaje.m.femQR, Distribucion.causaQR,TasaQR)
+
+
+Quintana_Roo <- flextable(head(QR), col_keys = c("Causas.de.muerteQR", "Porcentaje.m.masQR", "Porcentaje.m.femQR", "Distribucion.causaQR","TasaQR"))
+Quintana_Roo <- theme_vanilla(Quintana_Roo)
+Quintana_Roo <- set_caption(Quintana_Roo, caption = "Tabla de Quintana Roo. Distribución porcentual por mayores causas de muerte, por sexo y tasa de mortalidad por causas")
+Quintana_Roo <- add_footer_lines(Quintana_Roo, "Fuente: elaboración propia")
+Quintana_Roo
+
+
+#Análisis de Durango 
+# Haciendo el análisis respectivo del estado de Durango, consideremos la primer causa de muerte, que es enfermedades del corazón 
+# Verificando la columna dos se expone el porcentaje de muertes masculinas por enfermedad específica, eso quiere decir que de enfermedades de corazón el 55.41% de las muertes fueron hombres y aproximadamente 44.58% de las muertes fueron en mujeres, o en otras palabras, murieron más hombres que mujeres. 
+# Por otro lado, podemos verificar que tumores malignos tanto hombres como mujeres presentaron el mismo porcentaje, es decir, murieron la misma cantidad de hombres que de mujeres. 
+# Para la columna 4 se presenta la distribución total por causa de muerte, eso signifca que, nos especifican el porcentaje que representan las defunciones por cada enfermedad. 
+# En este caso el  27.28% de las muertes fueron por enfermedades del corazón.
+# Y finalmente en la columna 5 tenemos la tasa de mortalidad por causa por 100,000 habitantes, y se expone que 200 personas por cada 100,000 habitantes murieron por enfermedades del corazón.
+
+
+#Análisis de Quintana Roo
+# Haciendo el análisis respectivo del estado de Quintana Roo, consideremos la primer causa de muerte, que es por COVID-19. 
+# Verificando la columna dos se expone el porcentaje de muertes masculinas por enfermedad específica, eso quiere decir que de COVID-19 el 66.86%% de las muertes fueron hombres y aproximadamente 33.13% de las muertes fueron en mujeres, o en otras palabras, murieron más hombres que mujeres. 
+# Para la columna 4 se presenta la distribución total por causa de muerte, eso signifca que, nos especifican el porcentaje que representan las defunciones por cada enfermedad. 
+# En este caso el  24.95% de las muertes fueron por COVID-19.
+# Y finalmente en la columna 5 tenemos la tasa de mortalidad por causa por 100,000 habitantes, y se expone que 147 personas por cada 100,000 habitantes murieron por COVID-19.
+
+#En conclusión cada estado asignado representa datos diferentes, y se debe a las características que representan a cada uno. 
