@@ -1,0 +1,219 @@
+---
+title: "Clase 27 de mayo"
+author: "Itzia Yamilé Livera Ramírez"
+date: '2022-06-08'
+output: html_document
+---
+**Tablas de vida**
+
+<div style="text-align: justify">
+En el análisis demográfico una inquietud que ha existido desde su inicio ha sido la medida de la
+longevidad de la población o el estudio del número de años qué las personas viven en
+promedio. Es importante señalar que la longevidad ha tenido cambios a través del tiempo, en
+las diferentes regiones del mundo, y actualmente existen diferencias relevantes entre los
+países respecto al envejecimiento de su población.
+
+En la mortalidad las diferencias se presentan tanto entre poblaciones como entre edad, sexo
+niveles socioeconómicos y muchas otras características de la población, estas diferencias
+pueden ser matizadas mediante una medida de qué tanto espera vivir la gente obtenida a
+través de una cohorte nacida en un el año n y observar qué tanto ellos viven en las diferentes
+etapas de su vida hasta su muerte. La idea de las tablas de vida es conocer cómo sobreviven
+en promedio las personas hasta que toda esa cohorte se extinga, con esto podríamos ver el
+número de años en promedio que vive toda la cohorte.
+
+Ante esta inquietud, diversos demógrafos propusieron las tablas de vida como una estimación a
+la esperanza de vida usando tasas de sobrevivencia en edades desplegadas o grupos de edad
+de una población. Las tablas de vida se relacionan con el número de muerte por edad y el
+número de personas del mismo año que sobreviven de un año a otro, en ese sentido para la
+construcción de las tablas de vida se plantean diversos supuestos.
+
+*Número 1.*En esta población no hay migración.
+
+*Número 2.*Las tasas específicas de mortalidad por edad no cambian en el tiempo.
+
+*Número 3.* La población inicial es de 100,000 personas y se mantiene constante en el tiempo
+esta población es estacionaria esto quiere decir que no tiene cambios en el tiempo.
+
+Es importante señalar que la tabla de vida plantea una cohorte sintética de 100,000 y se
+calculan separadamente para hombres y mujeres debido a que hay diferencias en la
+mortalidad, lo anterior no restringe también poder calcular una tabla de vida para todas las
+personas es decir combinando los sexos.
+
+Una vez que se plantean que es una tabla de vida y los supuestos que deben de asumirse, la
+información mínima para poder realizar esta tabla es el número de muertos por edad en un
+periodo de tiempo y las personas sobrevivientes por edad a mitad de año
+En las proximas lineas se van a presentar los elementos que contiene una tabla de vida, así
+como calcular cada uno para poder conocer la esperanza de vida de la población estudiada.
+
+
+**Construcción de una tabla de vida**
+Recordemos que para calcular una tabla de vida partimos de una población hipotetica de
+100,000 personas nacidas en el año t
+
+- Tasas específicas de mortalidad por edad 
+
+Las tasas específicas de mortalidad por edad en la edad x se representan con mx y se calcula
+con la siguiente ecuación.
+
+$m_x=\frac{d_x}{P_x}$
+
+donde:
+
+$m_x \text{  es la tasa específica de mortalidad en la edad x}$
+
+$d_x \text{  es el número de muertos en la edad x}$
+
+$Px \text{  es la población a mitad de año en la edad x}$
+
+**Probabilidad de muerte**
+
+La probabilidad de muerte es el segundo componente de una tabla de vida y se representa a través de qx que representa la probabilidad de morir entre la edad $x$ y $x+1$. Entonces la probabilidad de morir es:
+
+$q_x=\frac{d_x}{P_x + \frac{1}{2}d_x}$
+
+donde:
+
+$q_x \text{  es probabilidad de morir de la edad x a la edad x+1}$
+
+$d_x \text{  es el número de muertes en la edad x}$
+
+$Px \text{  es la población a mitad de año en la edad x}$
+
+La ecuación anterior está definida en el numerador por el nùmero de muertos en la edad x, sin embargo en el denominador existe el problema de que la población se plantea a mitad de año, por lo que no es toda la población en riesgo que es como se define una probabilidad, en este caso, se asume que el mismo número de muertes van ocurrir la otra mitad de año, por lo que para tener toda la población en riesgo se tiene que sumar la mitad de las muertes del año y así
+obtener la probabilidad de morir de la edad x a la edad x+1 correcta.
+
+Ahora con base en las dos ecuaciones anteriores qx y mx que demostrar que:
+
+$q_x=\frac{2m_x}{2+m_x}$
+
+Esta ecuación es válida para las edades mayores a 1 y para conocer la probabilidad de morir de 0 a 1 año se plantea la siguiente ecuación: 
+
+$q_0=\frac{d_0}{N}$
+
+donde:
+
+$q_0 \text{  es probabilidad de morir a la edad 0}$
+
+$d_0 \text{  es el número de muertes de la edad 0 a 1}$
+
+$N \text{  los nacidos vivos de la población en estudio}$
+
+Por otro lado, también se considera que todas las personas mayores a 100 años se mueren en está población hipotética, por lo que se plantea que:
+
+$q_w=1$
+
+Aunado a lo anterior, se plantea px como la probabilidad de sobrevivencia a la edad x+1, entonces, px+qx = 1, con base en esto:
+
+$p_x=1-q_x$
+
+donde:
+
+$p_x \text{  es la probabilidad de sobrevivencia a la edad x+1}$
+
+$q_x \text{es la probabilidad de morir de la edad x a x+1}$
+
+Con la probabilidad de morir (qx) definida y la población hipotética inicial de 100,000 nacimientos, el número de muertes (dx) de la edad x a x+1 y conociendo el número de sobrevivientes (lx) en la edad x, entonces se puede estimar dx con la siguiente ecuación:
+
+$d_x=q_x l_x$
+
+donde:
+
+$d_x \text{  es el número de muertos de la edad x a x+1}$
+
+$q_x \text{  es la probabilidad de morir de la edad x a x+1}$
+
+$l_x \text{  es el número de sobrevivientes de la edad x$
+
+entonces:
+
+$l_{x+1}=l_x-d_x$
+
+donde
+
+$l_{x+1} \text{ es el número de sobrevivientes a la edad x+1}$
+
+$l_{x} \text{ es el número de sobrevivientes a la edad x}$
+
+$q_{x} \text{ es la probabilidad de morir de la edad x a x+1}$
+
+$l_0$ es igual al número de sobrevivientes en la edad cero o la población hipotética inicial que normalmente es de 100,000.
+
+**Años personas vividos y esperanza de vida**
+Los años personas vividos se define como aquellos que sobrevivieron desde la edad 0 hasta la edad x y se va definir como $L_x$. Sabemos que $d_x$ son las personas que morirán dentro de la edad $x$, y que $l_{x+1}$ son las personas que sobreviven a la edad $x+1$, además se utiliza el supuesto que las muertes se distribuyen uniformemente por lo que las personas que murieron en la edad $x$ viven la mitad del año de lasque sobreviven $l_{x+1}$ entonces se puede plantear la ecuación $L_x$ de la siguiente manera:
+
+$L_x=l_{x+1}+ \frac{1}{2}d_x$
+
+donde:
+
+$L_x \text{ son los años personas vividos a la edad x}$
+
+$l_{x+1} \text{ número de sobrevivientes a la edad x+1}$
+
+$d_x \text{ número de muertos de la edad x a x+1}$
+
+sustituyendo $d_x$
+
+$L_x= l_{x+1}+ \frac{1}{2}(l_x-l_{x+1})$
+
+Como sabemos que las muertes no tienen una distribución uniforme en el primer año entonces se propone que $L_0 = 0.3l_0 + 0.7l_1$ esta ponderación de las muertes puede cambiar de población a población sin embargo existe un consenso sobre considerar estas ponderaciones para calcular los años personas vividos para la edad 0, debido a que es el comportamiento que se ha encontrado en la mayoría de las poblaciones.
+
+Ahora que ya tenemos los años personas vividos (Lx) se calcula el total de personas vividos en la edad x ($T_x$) con la siguiente ecuación:
+
+
+$T_x= L_x+ L_{x+1}+...+L_w$
+
+donde:
+
+$T_x \text{es el total de personas que viven a la edad x}$
+
+$L_x son los años personas vividos en la edad x$
+
+Todos estos indicadores se plantearon con la finalidad de calcular la esperanza de vida ($e_x$) que es el principal indicador de una tabla de vida y se define de la siguiente manera:
+
+$e_x= \frac {T_x}{l_x}$
+
+donde 
+
+$e_x \text { es la esperanza de vida a la edad x}$
+
+$T_x \text { total de personas vividas edad x}$
+
+$l_x \text { número de sobrevivientes a la edad x}$
+
+**Tablas de vida con edades agrupadas**
+
+Una vez que se presentan las tablas de vida con edad desplegada se van a presentar las tablas de vida con edad agrupada, que en realidad lo único que hace es sumar las muertes por edad o calcular las tasas específicas por grupos de edad y calcular cada uno de los indicadores de la tabla de vida para obtener la esperanza de vida por grupos de edad. Es importante que recuerden que el primer grupo o el primer año se sigue manteniendo por las diferencias de mortalidad que existen, también observen como se define el último grupo de edad 100 y más.
+
+Para esta tabla las ecuaciones de los indicadores son los siguientes:
+
+$nm_x  = \frac{nd_x}{nP_x}$
+
+donde:
+
+$nm_x \text { son las tasas específicas de mortalidad de la edad x a x+n}$
+
+$nd_x \text { son las defunciones de la edad x a x+n}$
+
+$nP_x \text { la población media de la edad x a x+n}$
+
+
+$nq_x= \frac{2*n*nm_x}{2+(n*nm_x)}$
+
+donde:
+
+$nq_x \text { es la probabilidad de morir de la edad x a x+n}$
+
+$nd_x=nq_x*l_x$
+
+donde:
+
+$nd_x \text { defunciones de la edad x a x+n}$
+
+$nq_x \text { probabilidad de morir de la edad x a x+n}$
+
+$l_x \text { sobrevivientes a la edad x}$
+
+$l_{x+n}= l_x- nd_x$
+
+$nL_x=\frac{n}{2}(l_+ l_{x+n})$
+En el caso de $T_x$ y $e_x$ son las mismas ecuaciones para las tablas agrupadas. 
